@@ -3,7 +3,7 @@ version = '0.1-0'
 
 source = {
    url = 'git://github.com/PhenoML/lua-jmespath',
-   tag = '0.1.0',
+   tag = 'v0.1.0',
 }
 
 description = {
