@@ -1,4 +1,5 @@
-local ____lualib = require("lualib_bundle")
+local up_path = (...):match("(.-)[^%.]+.[^%.]+$")
+local ____lualib = require(up_path .. "lualib_bundle")
 local _json = require('cjson')
 local __TS__TypeOf = ____lualib.__TS__TypeOf
 local __TS__ArrayIsArray = ____lualib.__TS__ArrayIsArray

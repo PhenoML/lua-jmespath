@@ -1,4 +1,5 @@
-local ____lualib = require("lualib_bundle")
+local path = (...):match("(.-)[^%.]+$")
+local ____lualib = require(path .. "lualib_bundle")
 local __TS__Class = ____lualib.__TS__Class
 local __TS__ObjectKeys = ____lualib.__TS__ObjectKeys
 local __TS__ObjectAssign = ____lualib.__TS__ObjectAssign
@@ -24,9 +25,9 @@ local __TS__FunctionBind = ____lualib.__TS__FunctionBind
 local __TS__ArrayFilter = ____lualib.__TS__ArrayFilter
 local __TS__ArrayMap = ____lualib.__TS__ArrayMap
 local ____exports = {}
-local ____Lexer_2Ets = require("Lexer")
+local ____Lexer_2Ets = require(path .. "Lexer")
 local Token = ____Lexer_2Ets.Token
-local ____index_2Ets = require("utils.index")
+local ____index_2Ets = require(path .. "utils.index")
 local isObject = ____index_2Ets.isObject
 
 local __json = require('cjson')

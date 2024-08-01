@@ -1,4 +1,5 @@
-local ____lualib = require("lualib_bundle")
+local path = (...):match("(.-)[^%.]+$")
+local ____lualib = require(path .. "lualib_bundle")
 local __json = require("cjson")
 local __TS__Class = ____lualib.__TS__Class
 local __TS__StringAccess = ____lualib.__TS__StringAccess
@@ -16,7 +17,7 @@ local __TS__StringTrimStart = ____lualib.__TS__StringTrimStart
 local __TS__StringReplace = ____lualib.__TS__StringReplace
 local __TS__ParseInt = ____lualib.__TS__ParseInt
 local ____exports = {}
-local ____index_2Ets = require("utils.index")
+local ____index_2Ets = require(path .. "utils.index")
 local isAlpha = ____index_2Ets.isAlpha
 local isNum = ____index_2Ets.isNum
 local isAlphaNum = ____index_2Ets.isAlphaNum

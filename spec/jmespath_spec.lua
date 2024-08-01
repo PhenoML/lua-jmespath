@@ -1,4 +1,4 @@
-local jmespath = require "lua_jmespath"
+local jmespath = require "lua-jmespath"
 
 describe('jmespath', function()
   it("returns a result", function()

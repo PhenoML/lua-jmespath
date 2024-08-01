@@ -1,4 +1,4 @@
-local jmespath = require 'lua_jmespath'
+local jmespath = require 'lua-jmespath'
 local lfs = require 'lfs'
 local _json = require 'cjson'
 local say = require("say")

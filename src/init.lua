@@ -1,12 +1,13 @@
 --[[ Generated with https://github.com/TypeScriptToLua/TypeScriptToLua ]]
+local path = (...) .. "."
 local ____exports = {}
-local ____Parser_2Ets = require("Parser")
+local ____Parser_2Ets = require(path .. "Parser")
 local Parser = ____Parser_2Ets.default
-local ____Lexer_2Ets = require("Lexer")
+local ____Lexer_2Ets = require(path .. "Lexer")
 local Lexer = ____Lexer_2Ets.default
-local ____TreeInterpreter_2Ets = require("TreeInterpreter")
+local ____TreeInterpreter_2Ets = require(path .. "TreeInterpreter")
 local TreeInterpreterInst = ____TreeInterpreter_2Ets.default
-local ____Runtime_2Ets = require("Runtime")
+local ____Runtime_2Ets = require(path .. "Runtime")
 local InputArgument = ____Runtime_2Ets.InputArgument
 ____exports.TYPE_ANY = InputArgument.TYPE_ANY
 ____exports.TYPE_ARRAY = InputArgument.TYPE_ARRAY

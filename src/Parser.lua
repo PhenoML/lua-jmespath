@@ -1,4 +1,5 @@
-local ____lualib = require("lualib_bundle")
+local path = (...):match("(.-)[^%.]+$")
+local ____lualib = require(path .. "lualib_bundle")
 local __TS__Class = ____lualib.__TS__Class
 local __TS__SparseArrayNew = ____lualib.__TS__SparseArrayNew
 local __TS__SparseArrayPush = ____lualib.__TS__SparseArrayPush
@@ -11,7 +12,7 @@ local TypeError = ____lualib.TypeError
 local URIError = ____lualib.URIError
 local __TS__New = ____lualib.__TS__New
 local ____exports = {}
-local ____Lexer_2Ets = require("Lexer")
+local ____Lexer_2Ets = require(path .. "Lexer")
 local Lexer = ____Lexer_2Ets.default
 local Token = ____Lexer_2Ets.Token
 local bindingPower = {
@@ -44,7 +45,7 @@ local bindingPower = {
     [Token.TOK_LBRACKET] = 55,
     [Token.TOK_LPAREN] = 60
 }
-local ____index_2Ets = require("utils.index")
+local ____index_2Ets = require(path .. "utils.index")
 local has_value = ____index_2Ets.has_value
 local make_array = ____index_2Ets.make_array
 local TokenParser = __TS__Class()
