@@ -1,17 +1,17 @@
 test: build
-	busted
+	busted --lua=luajit
 
 build:
-	luarocks make rockspecs/lua-jmespath-0.1-1.rockspec > /dev/null
+	luarocks --lua-version 5.1 make rockspecs/lua-jmespath-0.1-2.rockspec > /dev/null
 
 perf: build
 	@if [ -n "$$JIT" ]; then luajit bin/perf.lua; else lua bin/perf.lua; fi
 
 test-setup:
-	luarocks install busted
-	luarocks install luafilesystem
+	luarocks --lua-version 5.1 install busted
+	luarocks --lua-version 5.1 install luafilesystem
 
 test-script: build
-	lua ./tester.lua
+	luajit ./tester.lua
 
 .PHONY: build

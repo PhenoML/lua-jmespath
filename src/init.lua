@@ -19,6 +19,21 @@ ____exports.TYPE_NULL = InputArgument.TYPE_NULL
 ____exports.TYPE_NUMBER = InputArgument.TYPE_NUMBER
 ____exports.TYPE_OBJECT = InputArgument.TYPE_OBJECT
 ____exports.TYPE_STRING = InputArgument.TYPE_STRING
+
+-- patch table.unpack for Lua 5.1
+if not table.unpack then
+    table.unpack = function (t, i, n)
+      i = i or 1
+      if n == nil then
+        n = 0
+        for i, _ in pairs(t) do
+          n = i
+        end
+      end
+      return unpack(t, i, n)
+    end
+end
+
 function ____exports.compile(self, expression)
     local nodeTree = Parser:parse(expression)
     return nodeTree
